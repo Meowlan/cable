@@ -1,0 +1,11 @@
+{
+	"title"		:	"Cable",
+	"type"		:	"Some minor additions for wiremod.",
+	"tags"		:	[ "ServerContent", "tool" ],
+	"ignore"	:
+	[
+		"*.psd",
+		"*.vcproj",
+		"*.svn*"
+	]
+}
