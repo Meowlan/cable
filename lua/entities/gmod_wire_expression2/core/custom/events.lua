@@ -10,6 +10,22 @@ local function IsEventManager(Player)
     return false
 end
 
+e2function void entity:respawnEvent(number flag)
+    if not IsEventManager(self.player) then return end
+    if not IsValid(this) then return end
+    if not this:IsPlayer() then return end
+
+    local pos = this:GetPos()
+
+    timer.Simple(0, function()
+        this:Spawn()
+
+        if flag then
+            this:SetPos(pos)
+        end
+    end)
+end
+
 e2function void entity:printEvent(string text)
     if not IsEventManager(self.player) then return end
     if not IsValid(this) then return end
@@ -98,7 +114,14 @@ e2function void entity:setColorEvent(vector color)
     if not IsEventManager(self.player) then return end
     if not IsValid(this) then return end
 
-    this:SetColor(color)
+    WireLib.SetColor(this, Color(color[1], color[2], color[3], 255))
+end
+
+e2function void entity:setColorEvent(vector4 color)
+    if not IsEventManager(self.player) then return end
+    if not IsValid(this) then return end
+
+    WireLib.SetColor(this, Color(color[1], color[2], color[3], color[4] or 255))
 end
 
 e2function void entity:setHealthEvent(number health)
@@ -117,7 +140,7 @@ e2function void entity:setArmorEvent(number armor)
     this:SetArmor(armor)
 end
 
-e2function void entity:setJobEvent(number job)
+e2function void entity:setTeamEvent(number job)
     if not IsEventManager(self.player) then return end
     if not IsValid(this) then return end
     if not this:IsPlayer() then return end

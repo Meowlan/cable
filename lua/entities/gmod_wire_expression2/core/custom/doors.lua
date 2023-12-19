@@ -1,5 +1,5 @@
 if not DarkRP then return end
-E2Lib.RegisterExtension("cable-doors", true, "base64 conversion helpers")
+E2Lib.RegisterExtension("cable-doors", true, "darkrp doors helpers")
 
 __e2setcost(5)
 
