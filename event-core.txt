@@ -1,0 +1,20 @@
+Player:Print(String)
+Player:Hint(String)
+
+Player:SetPos(Vec)
+Player:SetAngle(Ang)
+
+Player:Kill()
+Player:KillSilent()
+
+Player:StripWeapons()
+Player:StripWeapon(String)
+Player:GiveWeapon(String)
+
+Player:SetModel(String)
+Player:SetColor(Vec)
+
+Player:SetHealth(Int)
+Player:SetArmor(Int)
+
+Player:SetJob(Int) # team id

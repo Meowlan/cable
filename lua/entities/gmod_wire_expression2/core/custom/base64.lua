@@ -1,3 +1,4 @@
+E2Lib.RegisterExtension("cable-base64", true, "base64 conversion helpers")
 __e2setcost(2)
 
 e2function string string:base64encode()
